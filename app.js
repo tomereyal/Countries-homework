@@ -21,7 +21,8 @@ async function init() {
 
     try {
       const countries = await getCountriesFromServer();
-      drawArray(result);
+      drawArray(countries);
+      console.log(countries);
     } catch (err) {
       alert(err);
       countriesCountainer.empty();
@@ -37,9 +38,17 @@ async function init() {
   }
 
   function generateCard(countryData) {
-    const { name, population } = countryData;
-    const card = $("<div class='country-card'></div>");
+    const { name, population, flag } = countryData;
+    const card = $("<div class='country-card'></div>").css(
+      "background-image",
+      `url(${flag})`
+    );
+    console.log(flag);
     const h3 = $("<h3></h3>").text(name);
-    const population = $("<div class='population'></div>").text(population);
+    const populationDiv = $("<div class='population'></div>").text(population);
+    card.append(h3, populationDiv);
+    return card;
   }
 }
+
+init();

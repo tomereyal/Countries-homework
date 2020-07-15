@@ -72,10 +72,11 @@
 }
 
 .country-card {
-  width: 120px;
-  height: 130px;
+  width: 140px;
+  height: 110px;
   background-color: #f8f8f8;
   margin-bottom: 20px;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
