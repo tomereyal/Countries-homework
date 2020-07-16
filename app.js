@@ -54,12 +54,6 @@ async function init() {
 
   getCountriesBtn.on("click", async function () {
     $(this).html(loader);
-    // console.log("search start");
-    // console.log("loader start");
-    // container.html(loader);
-    //resolve =>>> then
-    // reject =>>> catch
-
     try {
       const countries = await getCountriesFromServer();
       drawArray(countries);
