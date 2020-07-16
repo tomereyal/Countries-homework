@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countries</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="contain-in-margins">
@@ -13,13 +17,17 @@
         <h1>Our Countries</h1>
       </div>
       <div class="button" id="getCountriesBtn">Generate</div>
+      <div class="search-bar" id="searchBar">
+        <select class="select-box" id="categoriesBox">
+          <option value="name">Name </option>
+          <option value="population">Population</option>
+          <option value="languages">Languages</option>
+        </select>
+        <input type="text" id="searchInput" />
+        <div class="logobox" id="searchBtn"><i class="fa fa-search"></i></div>
+      </div>
       <div class="contain-and-center">
-        <div class="contain-countries" id="countriesCountainer">
-          <div class="country-card">
-            <h3>Zimbebouwe</h3>
-            <div class="population">8,000,000</div>
-          </div>
-        </div>
+        <div class="contain-countries" id="countriesCountainer"></div>
       </div>
     </div>
 
